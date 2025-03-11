@@ -11,10 +11,10 @@ package modelo;
 public class class_02 {
     public double distancia;
     
-    public void MetodoHallar(int km, int min){
-        km = km * 1000;
-        min = min * 60;
-        distancia = km /min;
+    public void MetodoHallar(double km, double min){
+        double kmT = km * 1000;
+        double minT = min * 60;
+        distancia = kmT * minT;
         
     }
 }

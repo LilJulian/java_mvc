@@ -58,6 +58,11 @@ public class Form_01 extends javax.swing.JPanel {
 
         txt_resultado.setBackground(new java.awt.Color(255, 255, 255));
         txt_resultado.setForeground(new java.awt.Color(0, 0, 0));
+        txt_resultado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_resultadoActionPerformed(evt);
+            }
+        });
 
         btn_hallar.setText("Hallar");
         btn_hallar.addActionListener(new java.awt.event.ActionListener() {
@@ -90,7 +95,6 @@ public class Form_01 extends javax.swing.JPanel {
                                             .addComponent(lado1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(106, 106, 106))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(btn_hallar)
                                         .addGap(49, 49, 49)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -144,6 +148,10 @@ public class Form_01 extends javax.swing.JPanel {
         lado2.setText("");
         txt_resultado.setText("");
     }//GEN-LAST:event_btn_limpiarActionPerformed
+
+    private void txt_resultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_resultadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_resultadoActionPerformed
 public static void main(String args[]) {
     java.awt.EventQueue.invokeLater(() -> {
         JFrame frame = new JFrame("Calculadora de Área");

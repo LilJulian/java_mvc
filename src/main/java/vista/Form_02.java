@@ -45,6 +45,8 @@ public class Form_02 extends javax.swing.JFrame {
 
         jLabel3.setText("Tiempo");
 
+        txt_tiempo.setForeground(new java.awt.Color(0, 0, 0));
+
         jButton1.setText("Hallar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,11 +62,6 @@ public class Form_02 extends javax.swing.JFrame {
         });
 
         txt_resultado.setForeground(new java.awt.Color(0, 0, 0));
-        txt_resultado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_resultadoActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -132,11 +129,8 @@ public class Form_02 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void txt_resultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_resultadoActionPerformed
         this.MetodoDistancia();
-    }//GEN-LAST:event_txt_resultadoActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,7 +162,7 @@ public class Form_02 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Form_02().setVisible(true);
+                new Form_02().setVisible(true);                
             }
         });
     }
@@ -185,8 +179,8 @@ public class Form_02 extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     public void MetodoDistancia(){
-    int tiempo = Integer.parseInt(txt_tiempo.getText());
-    int espacio = Integer.parseInt(txt_espacio.getText());
+    double tiempo = Double.parseDouble(txt_tiempo.getText());
+    double espacio = Double.parseDouble(txt_espacio.getText());
     obj.MetodoHallar(espacio,tiempo);
     txt_resultado.setText(String.valueOf(obj.distancia));
 }
