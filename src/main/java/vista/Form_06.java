@@ -1,8 +1,15 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+7. “EL NÁUFRAGO SATISFECHO” ofrece hamburguesas sencillas (S), dobles (D) y triples (T), las
+cuales tienen un costo de $5000, $6500 y $7800 respectivamente. La empresa acepta tarjetas
+de crédito con un cargo de 5 % sobre la compra. Suponiendo que los clientes adquieren N
+hamburguesas, las cuales pueden ser de diferente tipo, represente la solución en entorno
+grafico de NetBeans para determinar cuánto deben pagar.
  */
 package vista;
+
+import java.awt.List;
+import javax.swing.DefaultListModel;
+import modelo.class_06;
 
 /**
  *
@@ -10,11 +17,10 @@ package vista;
  */
 public class Form_06 extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Form_06
-     */
+    class_06 obj = new class_06();
     public Form_06() {
-        initComponents();
+        initComponents();    
+        setResizable(false);
     }
 
     /**
@@ -26,21 +32,185 @@ public class Form_06 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        spr_sencilla = new javax.swing.JSpinner();
+        spr_doble = new javax.swing.JSpinner();
+        spr_triple = new javax.swing.JSpinner();
+        btn_limpiar = new javax.swing.JButton();
+        btn_pagoTarjeta = new javax.swing.JButton();
+        btn_agregar = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txt_resultado = new javax.swing.JTextArea();
+        jPanel1 = new javax.swing.JPanel();
+        lbl_total = new javax.swing.JLabel();
+        lbl_cargoTarjeta = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel1.setText("“EL NÁUFRAGO SATISFECHO”");
+
+        jLabel2.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        jLabel2.setText("¿Cuantas y cuales deseas?");
+
+        jLabel3.setText("Sencilla");
+
+        jLabel4.setText("Doble");
+
+        jLabel5.setText("Triple");
+
+        btn_limpiar.setText("Limpiar");
+        btn_limpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_limpiarActionPerformed(evt);
+            }
+        });
+
+        btn_pagoTarjeta.setText("Prefiero pagar con tarjeta");
+        btn_pagoTarjeta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_pagoTarjetaActionPerformed(evt);
+            }
+        });
+
+        btn_agregar.setText("Agregar");
+        btn_agregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_agregarActionPerformed(evt);
+            }
+        });
+
+        txt_resultado.setColumns(20);
+        txt_resultado.setRows(5);
+        jScrollPane2.setViewportView(txt_resultado);
+
+        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
+
+        lbl_total.setText("                  ");
+
+        lbl_cargoTarjeta.setText("                     ");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(118, 118, 118)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_total)
+                    .addComponent(lbl_cargoTarjeta))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbl_total)
+                .addGap(53, 53, 53)
+                .addComponent(lbl_cargoTarjeta)
+                .addGap(149, 149, 149))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(161, 161, 161))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addComponent(btn_limpiar)
+                        .addGap(18, 18, 18)
+                        .addComponent(btn_pagoTarjeta)
+                        .addGap(44, 44, 44)
+                        .addComponent(btn_agregar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel3)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(spr_sencilla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(60, 60, 60)
+                                        .addComponent(jLabel4))
+                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(40, 40, 40)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(spr_doble, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(52, 52, 52)
+                                        .addComponent(jLabel5)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(spr_triple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(107, 107, 107)
+                                .addComponent(jLabel1)))))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel1)
+                .addGap(26, 26, 26)
+                .addComponent(jLabel2)
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(spr_sencilla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spr_doble, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spr_triple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane2)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(56, 56, 56)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_limpiar)
+                    .addComponent(btn_pagoTarjeta)
+                    .addComponent(btn_agregar))
+                .addGap(60, 60, 60))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_limpiarActionPerformed
+        spr_sencilla.setValue(0);
+        spr_doble.setValue(0);
+        spr_triple.setValue(0);
+        txt_resultado.setText("");
+        
+    }//GEN-LAST:event_btn_limpiarActionPerformed
+
+    private void btn_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_agregarActionPerformed
+        int sencilla = (int) spr_sencilla.getValue();
+        int doble = (int) spr_doble.getValue();
+        int triple = (int) spr_triple.getValue();
+        String resultado = "Hambuguesas: \nsencillas: " + sencilla + " \ndoble: " + doble + " \ntriple: " + triple;
+        txt_resultado.setText(String.valueOf(resultado));
+        obj.cacluclarTotal(sencilla, doble, triple);
+        lbl_total.setText("Total: "+String.valueOf(obj.suma));
+    }//GEN-LAST:event_btn_agregarActionPerformed
+
+    private void btn_pagoTarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_pagoTarjetaActionPerformed
+        double cargo = (obj.suma + 0.05) + obj.suma;
+        lbl_cargoTarjeta.setText("El total con tsrjeta es: \n" + cargo);
+    }//GEN-LAST:event_btn_pagoTarjetaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +248,24 @@ public class Form_06 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_agregar;
+    private javax.swing.JButton btn_limpiar;
+    private javax.swing.JButton btn_pagoTarjeta;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lbl_cargoTarjeta;
+    private javax.swing.JLabel lbl_total;
+    private javax.swing.JSpinner spr_doble;
+    private javax.swing.JSpinner spr_sencilla;
+    private javax.swing.JSpinner spr_triple;
+    private javax.swing.JTextArea txt_resultado;
     // End of variables declaration//GEN-END:variables
+    
+  
+
 }
